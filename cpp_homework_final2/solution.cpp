@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <cstring>   // for strlen, strcpy
+#include <stdexcept>
 
 // TODO: function prototypes
 
@@ -84,8 +85,14 @@ int main(int argc, char* argv[]) {
             }
             case 2: {
                 int index;
+
                 double gpa;
                 std::cin >> index >> gpa;
+
+                if (index < 0 || index >= size) {
+                    throw std::string("Invalid index");
+                }
+
                 updateGPA(&gpas[index],gpa);
                 // TODO: implement menu logic
                 break;
