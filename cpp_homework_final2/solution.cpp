@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstring>   // for strlen, strcpy
 #include <stdexcept>
+#include <string>
+
 
 // TODO: function prototypes
 
